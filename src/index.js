@@ -207,7 +207,8 @@ export async function showLocation(options) {
     case 'waze':
       url = `${prefixes.waze}?ll=${latlng}&navigate=yes`;
       if (title) {
-        url += `&q=${encodedTitle}`;
+        //url += `&q=${encodedTitle}`;
+        url = `${prefixes.waze}?q=${encodedTitle}&navigate=yes`;
       }
       break;
     case 'yandex':
